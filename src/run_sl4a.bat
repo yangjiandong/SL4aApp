@@ -1,0 +1,1 @@
+adb shell am start -a com.googlecode.android_scripting.action.LAUNCH_BACKGROUND_SCRIPT -n com.googlecode.android_scripting/.activity.ScriptingLayerServiceLauncher -e com.googlecode.android_scripting.extra.SCRIPT_PATH "/mnt/sdcard/sl4a/scripts/TestPyDev.py"

@@ -2,16 +2,16 @@
 
 import subprocess
 
-ADB = r'C:\Program Files (x86)\Android\android-sdk-windows\platform-tools\adb.exe'
-APPLICATION = 'hello_world.py'
-TARGET = '/sdcard/sl4a/scripts/'
+ADB = r'D:\workspace\android\android-sdk-windows\platform-tools\adb.exe'
+APPLICATION = 'TestPyDev.py'
+TARGET = '/mnt/sdcard/sl4a/scripts/'
 
 def main():
     # Upload the application.
-    subprocess.call([ADB, '-e', 'push', APPLICATION, TARGET + APPLICATION])
+    subprocess.call([ADB, 'push', APPLICATION, TARGET + APPLICATION])
 
     # Launch the application.
-    subprocess.call('"%s" -e shell am start \
+    subprocess.call('"%s" shell am start \
                   -a com.googlecode.android_scripting.action.LAUNCH_BACKGROUND_SCRIPT \
                   -n \
                   com.googlecode.android_scripting/.activity.ScriptingLayerServiceLauncher \
