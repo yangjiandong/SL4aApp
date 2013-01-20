@@ -1,11 +1,63 @@
 sl4a - python
 =============
 
+2013.01.20
+----------
+
+    1. start launch
+    StartLaunch.py
+
+    2. 定时任务
+    schedule.py
+
+    3. list installed modules
+    > adb shell ls /sdcard/com.googlecode.pythonforandroid
+
+    4. site-package
+    >adb pull /sdcard/com.googlecode.pythonforandroid/python_extras_r14.zip
+
+    install lib to devices
+    adb push library.egg /sdcard/com.googlecode.pythonforandroid/extras/python
+
+    5. WIFI
+    TestWifi.py
+
+    6. httpserver
+    TestHttpServer.py
+
+    7. vim
+    cutf8
+    sl4a
+    -- 注意一定是用tab
+snippet sl4a
+    import android
+    droid = android.Android()
+
 2013.01.19
 ----------
 
-    1. run
+    1. 发布运行到android
 
     Launch.py
+
+013.01.07 - sl4a
+--------------------
+
+    1. remote
+    set sl4a server port 4001
+    start server
+    ..
+    win7:
+    set AP_PORT=9999 on Windows
+    set AP_HOST=192.168.0.100 on Windows
+    adb forward tcp:9999 tcp:4001
+
+    download android.py to Python path (i.e. in site-packages or the current directory).
+
+    python
+    import android
+    # 以上设置不需要,直接用地址和端口
+    droid = android.Android()  # Or android.Android(('192.168.1.101', 6789)) for a public server, where 192.168.1.101 is the public server's IP, and 6789 is its port.
+    droid.makeToast("Hello from my computer!")
 
     --END

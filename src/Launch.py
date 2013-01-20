@@ -3,7 +3,7 @@
 import subprocess
 
 ADB = r'D:\workspace\android\android-sdk-windows\platform-tools\adb.exe'
-APPLICATION = 'TestPyDev.py'
+APPLICATION = 'TestHttpServer.py'
 TARGET = '/mnt/sdcard/sl4a/scripts/'
 
 def main():
