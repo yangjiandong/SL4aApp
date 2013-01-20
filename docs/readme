@@ -33,6 +33,19 @@ snippet sl4a
     import android
     droid = android.Android()
 
+    8. download
+    downloads.py
+
+    9. ftp
+    p192
+    ftpserver.py
+    >adb push ftpserver.py /sdcard/sl4a/scripts/ 
+    
+    TestFtpServer.py
+
+    10. smsmerger
+    http://android-scripting.blogspot.com/
+
 2013.01.19
 ----------
 
