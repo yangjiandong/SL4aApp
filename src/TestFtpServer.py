@@ -2,6 +2,9 @@
 # -*- coding: utf-8 -*-
 import android
 droid = android.Android()
+import sys
+
+sys.path.append('/sdcard/sl4a/libs/')
 
 import socket, struct
 import ftpserver
